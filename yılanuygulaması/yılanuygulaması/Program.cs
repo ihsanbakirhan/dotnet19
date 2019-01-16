@@ -18,7 +18,7 @@ namespace yılanuygulaması
         int[] TailY = new int[100];
 
         const int height = 20;
-        const int width = 60;
+        const int width = 60;  
 
         bool gameOver, reset, isprinted, horizontal, vertical;
         string dir, pre_dir;
@@ -44,7 +44,7 @@ namespace yılanuygulaması
             Console.WriteLine("                  - Press R to reset game                   ");
             Console.WriteLine("                  - Press ESC to quit game                  ");
             Console.WriteLine();
-            Console.Write("      Created by İhsan Bakırhan");
+            
 
             keypress = Console.ReadKey(true);
             if (keypress.Key == ConsoleKey.Escape)
