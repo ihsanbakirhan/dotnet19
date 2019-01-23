@@ -48,17 +48,19 @@ namespace Students
             dataGridView1.Columns[4].HeaderText = "Email";
             dataGridView1.Columns[5].HeaderText = "State";
             dataGridView1.Columns[6].HeaderText = "Grade";
+            
             fillStateCombobox();
+            calculateAverage();
         }
 
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            var studentId = (int)dataGridView1.CurrentRow.Cells[0].Value;
-            var student = (Student)students.Find(x => x.studentId == studentId);
-            var form2 = new Form2(this, student);
-            form2.Show();
+            
         }
-
+        /// <summary>
+        /// Adds student to the grid.
+        /// </summary>
+        /// <param name="student">Ogrenci</param>
         public void insertStudent(Student student)
         {
             student.studentId = students.Count+1;
@@ -73,57 +75,52 @@ namespace Students
             dataGridView1.DataSource = students;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void searchTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (textBox1.Text.Length == 0)
+            if (searchTextBox.Text.Length == 0)
             {
                 dataGridView1.DataSource = students;
             }
             else
             {
-                var searchedStudents = students.FindAll(x => (x.name.ToLower().Contains(textBox1.Text.ToLower()) || x.surname.ToLower().Contains(textBox1.Text.ToLower())));
+                var searchedStudents = students.FindAll(x => x.name.ToLower()
+                .Contains(searchTextBox.Text.ToLower()) 
+                || x.surname.ToLower().Contains(searchTextBox.Text.ToLower()));
                 dataGridView1.DataSource = searchedStudents;
             }
         }
-        public List<string> seherler = new List<string>();
         private void fillStateCombobox()
         {
-
-            foreach (var sehir in students)
-            {
-                if (!seherler.Contains(sehir.state))
-                {
-                    seherler.Add(sehir.state);
-                }
-            }
-            seherler.Sort();
-            comboBox1.Items.Add("ALL");
-            foreach (var item in seherler)
-            {
-                comboBox1.Items.Add(item);
-            }
+            var states = students.GroupBy(x => x.state)
+                   .Select(grp => grp.First())
+                   .OrderBy(x => x.state)
+                   .ToList();
+            var s = new Student();
+            s.state = "ALL";
+            //states.Insert(0, s);
+            stateCombobox.DataSource = states;
+            stateCombobox.DisplayMember = "state";
+            stateCombobox.ValueMember = "state";
+            
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void stateCombobox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.Text == "ALL")
-
+            if (stateCombobox.SelectedIndex == 0)
             {
                 dataGridView1.DataSource = students;
             }
             else
             {
-                var sehirler = students.FindAll(x => (x.state.ToLower().Contains(comboBox1.Text.ToLower())));
-                dataGridView1.DataSource = sehirler;
+                var searchedStudents = students
+                    .FindAll(x => x.state == stateCombobox.SelectedValue.ToString());
+                dataGridView1.DataSource = searchedStudents;
             }
         }
+
         private void dataGridView1_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            MessageBox.Show("naber naptın");
-        }
-        bool normalsirala = true;
-        private void dataGridView1_ColumnHeaderMouseClick_1(object sender, DataGridViewCellMouseEventArgs e)
-        {
+            
             switch (e.ColumnIndex)
             {
                 case 0:
@@ -213,6 +210,25 @@ namespace Students
                 default:
                     break;
             }
+
+            
+        }
+
+        private void dataGridView1_MouseHover(object sender, EventArgs e)
+        {
+            //var p = this.dataGridView1.PointToClient(Cursor.Position);
+            
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                var studentId = (int)dataGridView1.CurrentRow.Cells[0].Value;
+                var student = (Student)students.Find(x => x.studentId == studentId);
+                var form2 = new Form2(this, student);
+                form2.Show();
+            }
         }
 
         private void dataGridView1_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
@@ -224,6 +240,7 @@ namespace Students
                     cell.Style.BackColor = Color.Yellow;
                 }
             }
+            
         }
 
         private void dataGridView1_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
@@ -235,6 +252,16 @@ namespace Students
                     cell.Style.BackColor = Color.White;
                 }
             }
+        }
+        private void calculateAverage()
+        {
+            averageLabel.Text = "Average : " + students.Average(x => x.grade).ToString();
+        }
+
+        private void browseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var browser = new Browser();
+            browser.Show();
         }
     }
 }
