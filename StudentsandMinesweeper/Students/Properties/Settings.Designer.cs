@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace minefield.Properties
+namespace Students.Properties
 {
 
 
