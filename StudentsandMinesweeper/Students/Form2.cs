@@ -12,7 +12,7 @@ namespace Students
 {
     public partial class Form2 : Form
     {
-        Student student = new Student();
+        public Student student = new Student();
         Form1 form1;
         public Form2(Form1 sender)
         {
@@ -67,6 +67,12 @@ namespace Students
                 form1.deleteStudent(student);
             }
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var form3 = new Form3(this);
+            form3.Show();
         }
     }
 }
