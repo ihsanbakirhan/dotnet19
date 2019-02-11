@@ -20,9 +20,6 @@ namespace CRM.Forms
         Variant variant;
         ProductEditForm productEditForm;
         Int16 stock = 0;
-        SqlConnection connection =
-           new SqlConnection(
-               ConfigurationManager.ConnectionStrings["connection"].ConnectionString);
         public VariantEditForm()
         {
             InitializeComponent();
@@ -82,15 +79,15 @@ namespace CRM.Forms
             catch (Exception ex)
             {
 
-                MessageBox.Show("stock must be numeric", ex.Message);
+                MessageBox.Show("stock must be numeric" + ex.Message);
             }
         }
 
         private void saveButton_Click(object sender, EventArgs e)
         {
             SqlConnection connection =
-         new SqlConnection(
-             ConfigurationManager.ConnectionStrings["connection"].ConnectionString);
+                   new SqlConnection(
+                       ConfigurationManager.ConnectionStrings["connection"].ConnectionString);
             if (variant == null)
             {
                 try
@@ -105,14 +102,11 @@ namespace CRM.Forms
                     command.Parameters.Add(new SqlParameter("@CreateUser", user.userId));
                     command.Parameters.Add(new SqlParameter("@Stock", Convert.ToInt16(StockTextBox.Text)));
                     command.ExecuteNonQuery();
-                    MessageBox.Show("Successfully insert your data...!");
-
-
-
+                    MessageBox.Show("Insert Successfull!");
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error:" + ex.Message);
+                    MessageBox.Show(ex.Message);
                 }
                 finally
                 {
@@ -124,17 +118,17 @@ namespace CRM.Forms
                 try
                 {
                     connection.Open();
-                    SqlCommand cmd = new SqlCommand("Update ProductVariants Set ProductId = @ProductId,VariantName = @VariantName, UnitPrice = @UnitPrice, Cost = @Cost,    UpdateUser = @UpdateUser,Stock = @Stock, UpdateDate = getdate() where ProductVariantId = @ProductVariantId", connection);
-                    cmd.Parameters.Add(new SqlParameter("@ProductVariantId", variant.variantId));
-                    cmd.Parameters.Add(new SqlParameter("@ProductId", product.productId));
-                    cmd.Parameters.Add(new SqlParameter("@VariantName", VariantNameTextBox.Text));
-                    cmd.Parameters.Add(new SqlParameter("@UnitPrice", Convert.ToDecimal(UnitPriceTextBox.Text.Trim())));
-                    cmd.Parameters.Add(new SqlParameter("@Cost", Convert.ToDecimal(CostTextBox.Text.Trim())));
+                    SqlCommand command = new SqlCommand("UPDATE ProductVariants SET ProductId=@ProductId,VariantName=@VariantName, UnitPrice=@Unitprice, Cost=@Cost,UpdateUser=@UpdateUser,Stock=@Stock where ProductVariantId=@ProductVariantId", connection);
+                    command.Parameters.Add(new SqlParameter("@ProductVariantId", variant.variantId));
+                    command.Parameters.Add(new SqlParameter("@ProductId", product.productId));
+                    command.Parameters.Add(new SqlParameter("@VariantName", VariantNameTextBox.Text));
+                    command.Parameters.Add(new SqlParameter("@UnitPrice", Convert.ToDecimal(UnitPriceTextBox.Text)));
+                    command.Parameters.Add(new SqlParameter("@Cost", Convert.ToDecimal(CostTextBox.Text)));
+                    command.Parameters.Add(new SqlParameter("@UpdateUser", user.userId));
+                    command.Parameters.Add(new SqlParameter("@Stock", Convert.ToInt16(StockTextBox.Text)));
+                    command.ExecuteNonQuery();
+                    MessageBox.Show("Update Successfull!");
 
-                    cmd.Parameters.Add(new SqlParameter("@CrateUser", Convert.ToInt16(user.userId)));
-                    cmd.Parameters.Add(new SqlParameter("@Stock", Convert.ToInt16(StockTextBox.Text)));
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Sucessfully, your data is updated...!");
 
                 }
                 catch (Exception ex)
@@ -148,39 +142,43 @@ namespace CRM.Forms
             }
         }
 
-        private void deleteButton_Click(object sender, EventArgs e)
+        private void DeleteButton_Click(object sender, EventArgs e)
         {
             SqlConnection connection =
-         new SqlConnection(
-             ConfigurationManager.ConnectionStrings["connection"].ConnectionString);
-            var status = MessageBox.Show("Are you sure to delete this variant?", "Delete", MessageBoxButtons.YesNo);
-            if (status == DialogResult.Yes)
+                   new SqlConnection(
+                       ConfigurationManager.ConnectionStrings["connection"].ConnectionString);
+
             {
-                try
+                var status = MessageBox.Show("Are you sure to delete this variant?", "Delete", MessageBoxButtons.YesNo);
+                if (status == DialogResult.Yes)
                 {
-                    connection.Open();
-                    SqlCommand command = new SqlCommand("DELETE FROM ProductVariants WHERE ProductVariantId=@ProductVariantId", connection);
-                    command.Parameters.AddWithValue("@ProductVariantId", variant.variantId);
-                    command.ExecuteNonQuery();
-                    MessageBox.Show("Variant Deleted");
-                    if (productEditForm != null)
+                    try
                     {
-                        productEditForm.LoadVariants();
+                        connection.Open();
+                        SqlCommand command = new SqlCommand("DELETE FROM ProductVariants WHERE ProductVariantId=@ProductVariantId", connection);
+                        command.Parameters.AddWithValue("@ProductVariantId", variant.variantId);
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Variant Deleted");
+                        if (productEditForm != null)
+                        {
+                            productEditForm.LoadVariants();
+
+                        }
+                        this.Close();
 
                     }
-                    this.Close();
+                    catch (Exception ex)
+                    {
 
-                }
-                catch (Exception ex)
-                {
-
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    connection.Close();
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        connection.Close();
+                    }
                 }
             }
         }
     }
 }
+

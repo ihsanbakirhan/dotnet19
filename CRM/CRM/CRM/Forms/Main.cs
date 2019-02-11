@@ -1,5 +1,4 @@
-﻿using CRM.Forms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -112,12 +111,13 @@ namespace CRM
         private void Main_Load(object sender, EventArgs e)
         {
             userNameLabel.Text = user.userName;
-            var productListForm = new ProductListForm();
+            var productListForm = new ProductListForm(user);
             productListForm.MdiParent = this;
             productListForm.Show();
         }
 
-        private void productsToolStripMenuItem_Click(object sender, EventArgs e)        {
+        private void productsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             
         }
 

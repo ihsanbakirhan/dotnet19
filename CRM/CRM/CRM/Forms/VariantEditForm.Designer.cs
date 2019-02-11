@@ -39,7 +39,7 @@
             this.plusButton = new System.Windows.Forms.Button();
             this.minusButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
-            this.deleteButton = new System.Windows.Forms.Button();
+            this.DeleteButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // VariantNameTextBox
@@ -144,7 +144,7 @@
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(124, 309);
+            this.saveButton.Location = new System.Drawing.Point(138, 320);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(75, 23);
             this.saveButton.TabIndex = 15;
@@ -152,22 +152,22 @@
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
-            // deleteButton
+            // DeleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(15, 309);
-            this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(75, 23);
-            this.deleteButton.TabIndex = 16;
-            this.deleteButton.Text = "delete";
-            this.deleteButton.UseVisualStyleBackColor = true;
-            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+            this.DeleteButton.Location = new System.Drawing.Point(21, 320);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(75, 23);
+            this.DeleteButton.TabIndex = 16;
+            this.DeleteButton.Text = "Delete";
+            this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // VariantEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.deleteButton);
+            this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.minusButton);
             this.Controls.Add(this.plusButton);
@@ -200,6 +200,6 @@
         private System.Windows.Forms.Button plusButton;
         private System.Windows.Forms.Button minusButton;
         private System.Windows.Forms.Button saveButton;
-        private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.Button DeleteButton;
     }
 }

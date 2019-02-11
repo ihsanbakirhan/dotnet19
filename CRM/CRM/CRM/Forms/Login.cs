@@ -84,8 +84,8 @@ namespace CRM
 
         private void Login_Shown(object sender, EventArgs e)
         {
-            handleTextBox.Text = "ayalcin";
-            passwordTextBox.Text = "12345678";
+            handleTextBox.Text = "tolgaaydemir";
+            passwordTextBox.Text = "363416";
             sendButton_Click(null, null);
         }
     }
