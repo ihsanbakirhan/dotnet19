@@ -56,8 +56,9 @@ namespace Web19
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
-            });
+                    template: "{controller=Account}/{action=Login}/{id?}");
+        //template: "{controller=Home}/{action=Index}/{id?}");
+        });
         }
     }
 }

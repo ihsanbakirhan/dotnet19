@@ -1,0 +1,124 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+    <link href="~/css/Login.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="container body-content">
+        <div class="row">
+
+            <div class="col-12 col-sm-12 col-md-6">
+
+                <div class="loginForm">
+                    <img src="~/images/icon.svg" class="loginIcon" />
+                    <div class="loginFormBox">
+                        
+                        <div class="loginSignIn">Sign In</div>
+                        <div class="loginLabel">Email Address</div>
+                        <div class="loginBase">
+                            <input type="text" id=" txtUserName" />
+                        </div>
+                        <div class="loginLabel">Password</div>
+                        <div class="loginBase">
+                            <input type="password" id="txtPassword" />
+                            <img src="~/images/eye.svg" class="loginEyeIcon" onclick="eyeClick()" />
+                        </div>
+                        <button class="loginButton">Sign In</button>
+                        <div class="loginConnectLabel"> or connect with</div>
+                        <div class="loginConnect">
+                            <div class="loginConnectButton loginBorderRight">
+                                <div class="loginConnectButtonContent">
+                                    <img src="~/images/twitter.svg" />
+                                    <div>Twitter</div>
+                                </div>
+                            </div>
+                            <div class="loginConnectButton loginBorderRight">
+                                <div class="loginConnectButtonContent">
+                                    <img src="~/images/facebook.svg" />
+                                    <div>Facebook</div>
+                                </div>
+                            </div>
+                            <div class="loginConnectButton">
+                                <div class="loginConnectButtonContent">
+                                    <img src="~/images/google.svg" />
+                                    <div>Google</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="login col-12 col-sm-12 col-md-6">
+                <div class="rightImg">
+                    <img src="~/images/pic-base.jpg" srcset="~/images/pic-base@2x.jpg 2x,~/images/pic-base@3x.jpg 3x" />
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+    <script type="text/javascript">
+        var password = true;
+        function eyeClick() {
+            if (password) {
+                password = false;
+                $("#txtPassword").get(0).setAttribute('type', 'text');
+            }
+            else {
+                password = true;
+                $("#txtPassword").get(0).setAttribute('type', 'password');
+
+            }
+        }
+    </script>
+
+    
+</body>
+</html>
