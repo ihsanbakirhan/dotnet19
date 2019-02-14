@@ -143,3 +143,43 @@
 #rightImg{
     float:left;
 }
+.loginWelcomeContent {
+    position: absolute;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.45;
+    letter-spacing: normal;
+    color: white;
+    margin-top: 10px;
+    bottom: 20px;
+    margin-left:50px;
+}
+
+.loginForget a {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.45;
+    letter-spacing: normal;
+    color: #9ea0a5;
+    margin-top: 20px;
+    float: right;
+    margin-right: 200px;
+}
+.rightImg {
+    position:relative;
+}
+.baslik {
+    position: absolute;
+    font-family: Roboto;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    left: 120px;
+    bottom: 60px;
+}
