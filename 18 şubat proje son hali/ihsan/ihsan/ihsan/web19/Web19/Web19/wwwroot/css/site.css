@@ -1,0 +1,252 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+body {
+    padding-top: 70px;
+    padding-bottom: 20px;
+    font-family: Roboto;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 20px;
+    padding-right: 0px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+.container {
+    width: 100%;
+}
+
+.navbar-nav {
+  margin-left:400px;
+}
+
+.navbar-inverse {
+    background-color: #1665d8;
+    font-weight: bold;
+    text-align: center;
+    border-color: white;
+}
+
+.container > .navbar-collapse {
+    padding-top: 8px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: white !important;
+    font-size: 12px;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-size: 16px;
+}
+
+.navbar-nav {
+    position: relative;
+    text-align: center;
+}
+
+.navbar-header {
+    position: relative;
+    top: -5px;
+}
+
+.sidebar {
+    background-color: white;
+    width: 280px;
+    height: 100%;
+    float: left;
+    border-right: solid 1px #eaedf3;
+    padding-left: 15px;
+}
+
+.dashboard {
+    float: left;
+}
+
+.accountBox {
+    margin-right: 15px;
+}
+
+.accountPhoto {
+    float: left;
+    width: 45px;
+    height: 45px;
+    margin-top: 15px;
+}
+
+.accountText {
+    float: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 10pt;
+    margin-top: 15px;
+}
+
+.accountTitle {
+    color: #eaedf3;
+}
+
+.leftProfilNumber {
+    padding-top: 20px;
+    margin-right: 22px;
+    margin-top: 70px !important;
+}
+
+.profilNumber {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.profilPartialNumber {
+    color: gray;
+    font-size: 8px;
+    font-weight: bold;
+}
+.totalTapsProfil {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 10px;
+    color: #a79f9f;
+}
+.interactProfil {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 12px;
+    color:black;
+}
+.profilBorder {
+    border-right: 1px solid #eaedf3;
+}
+
+.borderBottom {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-top: 1px solid #eaedf3;
+}
+
+.mainMenu {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 10px;
+ 
+    margin-bottom: 10px;
+    color: #a79f9f;
+    display: block;
+    width: 100%;
+}
+.itemMenu {
+    display:inline-block;
+    width:100%;
+}
+.itemMenu{
+
+    padding:5px !important;
+    font-family:Roboto;
+  font-weight:bold;
+}
+.itemMenu:hover{
+    color:#1665d8;
+    border-left:solid 3px #1665d8;
+    background-color:#f6f9fd;
+}
+.weeklyTitle {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 10px;
+    color: #a79f9f;
+
+}
+.last7 {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 10px;
+    color: #a79f9f;
+    
+}
+.weekTopSpace {
+    margin-top: 20px;
+}
+.graphRow {
+    height: 80px;
+    padding-left: 20px;
+    position: relative;
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.graphColumn {
+    width: 23px;
+    float: left;
+    margin-right: 13px;
+    position: relative;
+}
+
+.graphBar {
+    width: 23px;
+    height: 56.1px;
+    border-radius: 2px;
+    background-color: #1665dB;
+    float: left;
+    position: absolute;
+    bottom: 20px;
+}
+
+.graphLabel {
+    float: left;
+    width: 23px;
+    text-align: center;
+    font-size: 8pt;
+    color: #9ea0a5;
+    position: absolute;
+    bottom: 0px;
+}
+.sidebar {
+    background-color: white;
+    max-width: 280px;
+    min-width: 280px;
+    height: 900px;
+    float: left;
+    border-right: solid 1px #eaedf3;
+}
+
+    .sidebar.active {
+        margin-left: -280px;
+    }
+
+@media (max-width:768px) {
+    .sidebar {
+        margin-left: -280px;
+    }
+
+        .sidebar.active {
+            margin-left: 0px;
+        }
+}

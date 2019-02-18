@@ -1,0 +1,246 @@
+﻿body {
+    background-color:#fafafa;
+    padding-top:0px !important;
+    margin-top:auto;
+}
+/*#rw {
+    background-color: #F5F5F5;
+    width: auto;
+    margin-left: 50px;
+    height:100%;  
+    padding-bottom:20px;
+}*/
+html,body,container-table{
+    height:100% !important;
+    width:auto !important;
+
+}
+.container-table{
+    display :table;
+
+}
+.vertical-center-row{
+    display:table-cell;
+    vertical-align:middle;
+    
+}
+.login {
+    padding-right: 0px;
+    padding-left: 0px;
+   padding-top:50px;
+ 
+}
+.loginForm {
+
+    background-color: white;
+    width:445px;
+    height:403px;
+    float:right;
+    border-top-left-radius:4px;
+    border-bottom-left-radius:4px;
+    position:relative;
+}
+.loginImage{
+    float:left; 
+}
+
+.loginIcon{
+    position:absolute;
+    left:30px;
+    top:-20px;
+    bottom:380px;
+  
+}
+.loginFormBox{
+    padding-left:30px;
+    padding-top:40px;
+}
+.loginSignIn {
+    font-family: Roboto;
+    font-size: 22px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.45;
+    letter-spacing: normal;
+    color: #3e3f42;
+    padding-bottom: 18px;
+    padding-top:0px;
+}
+.loginLabel {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #9ea0a5;
+    margin-top:15px;
+}
+
+.loginBase {
+    margin-top: 5px;
+
+    position: relative;
+    width: 370px;
+}
+    .loginBase input {
+        
+        width: 360px;
+        height: 38px;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.57;
+        letter-spacing: normal;
+        color: #3e3f42;
+        border-radius: 4px;
+        border-width: thin;
+        box-shadow: none;
+        border-style: solid;
+        border-color: #e2e5ed;
+        background-color: var(--white);
+        padding-left: 16px;
+        padding-right:16px;
+    }
+   .loginEyeIcon{
+       position:absolute;
+       right:20px;
+       top:10px;
+       cursor:pointer;
+   }
+   #txtPassword{
+       padding-right:40px;
+   }
+.loginButton {
+    width: 360px;
+    height: 38px;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px 0 rgba(19, 31, 21, 0.1), inset 0 2px 0 0 rgba(255, 255, 255, 0.06);
+    background-image: linear-gradient(to top, #34aa44, #38b249);
+    margin-top: 20px;
+    color: white;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    border: none;
+}
+
+.loginConnectLabel {
+    text-align: center;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    color: #9ea0a5;
+    margin-top: 20px;
+}
+.loginConnect {
+    margin-top: 20px;
+    position: relative;
+    border-top-width: 0px;
+    border-top-color: #eaedf3;
+    border-top-style: solid;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    color: #9ea0a5;
+}
+.loginConnectButton{
+    float:left;
+    text-align:center;
+    margin-top:0px;
+    width:33%;
+
+}
+   
+    .loginConnectButtonContent {
+        text-align: center;
+    }
+.loginConnectButtonContent img {
+    float: left;
+    padding-left: 10px;
+}
+    .loginConnectButtonContent div {
+        float: left;
+        padding-left: 10px;
+    }
+    .loginBorderRight{
+        border-right-width:1px;
+        border-right-color:#eaedf3;
+        border-right-style:solid;
+    }
+.loginImageBox {
+    position: absolute;
+    left: 10px;
+    right: 20px;
+    bottom: 60px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    color: white;
+    margin-top: 10px;
+}
+.loginWelcomeContent {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.57;
+    letter-spacing: normal;
+    color:white;
+    margin-top:10px;
+}
+.loginForget{
+    
+}
+.forgetPassword {
+    position: relative;
+    padding-top: 20px;
+    padding-left: 230px;
+    color: #9ea0a5;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: bold;
+    width:100%;
+}
+a:link {
+    color: red;
+}
+a:visited {
+    color: gray;
+}
+a:hover {
+    color: red;
+}
+a:active {
+    color: blue;
+}
+.error{
+    color:red;
+    font-family:Roboto;
+    font-size:12px;
+    font-weight:bold;
+}
+.loginBase{
+    height:45px;
+}

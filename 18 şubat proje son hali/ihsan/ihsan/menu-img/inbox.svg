@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>4C34E248-18E0-4D0D-9C4A-8C6B51E388E0</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M17,10 L17,7 L18,10 L17,10 Z M17,18 L3,18 C2.448,18 2,17.552 2,17 L2,12 L5,12 C5.552,12 6,12.448 6,13 L6,14 C6,15.105 6.895,16 8,16 L12,16 C13.105,16 14,15.105 14,14 L14,13 C14,12.448 14.448,12 15,12 L18,12 L18,17 C18,17.552 17.552,18 17,18 L17,18 Z M3,7 L3,10 L2,10 L3,7 Z M6,2 L14,2 C14.552,2 15,2.448 15,3 L15,10 L14,10 C12.895,10 12,10.895 12,12 L12,13 C12,13.552 11.552,14 11,14 L9,14 C8.448,14 8,13.552 8,13 L8,12 C8,10.895 7.105,10 6,10 L5,10 L5,3 C5,2.448 5.448,2 6,2 L6,2 Z M18,4 L17,4 L17,2 C17,0.895 16.105,0 15,0 L5,0 C3.895,0 3,0.895 3,2 L3,4 L2,4 L0,10 L0,18 C0,19.105 0.895,20 2,20 L18,20 C19.105,20 20,19.105 20,18 L20,10 L18,4 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-30.000000, -509.000000)">
+            <g id="Menu" transform="translate(0.000000, 70.000000)">
+                <g transform="translate(0.000000, 209.000000)" id="Item">
+                    <g transform="translate(0.000000, 217.000000)">
+                        <g id="Icon/20px/inbox_paper_round-[#1556]" transform="translate(30.000000, 13.000000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="inbox_paper_round-[#1556]" fill-opacity="0" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            <g id="⚙️Atoms/Colour/Grey-Darker/1---100%" mask="url(#mask-2)" fill="#9EA0A5" fill-rule="evenodd">
+                                <g transform="translate(-1.000000, -1.000000)" id="Colour">
+                                    <rect x="0" y="0" width="22" height="22"></rect>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

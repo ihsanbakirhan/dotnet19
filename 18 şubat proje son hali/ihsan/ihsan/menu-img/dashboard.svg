@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>F93FF177-2E0A-4249-ADEA-E088A0B7BEDE</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M2.22044605e-15,20 L2,20 L2,16 L2.22044605e-15,16 L2.22044605e-15,20 Z M6,20 L8,20 L8,12 L6,12 L6,20 Z M18,20 L20,20 L20,0 L18,0 L18,20 Z M12,20 L14,20 L14,6 L12,6 L12,20 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-30.000000, -325.000000)">
+            <g id="Menu" transform="translate(0.000000, 70.000000)">
+                <g transform="translate(0.000000, 209.000000)" id="Item">
+                    <g transform="translate(0.000000, 33.000000)">
+                        <g id="Icon/20px/signal-[#1517]" transform="translate(30.000000, 13.000000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use fill-opacity="0" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            <g id="⚙️Atoms/Colour/Blue/1---100%" mask="url(#mask-2)" fill="#1665D8" fill-rule="evenodd">
+                                <g transform="translate(-1.000000, -1.000000)" id="Rectangle">
+                                    <rect x="0" y="0" width="22" height="22"></rect>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
