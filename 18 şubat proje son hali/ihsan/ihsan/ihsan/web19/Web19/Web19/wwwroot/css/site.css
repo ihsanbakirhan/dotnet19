@@ -36,7 +36,9 @@ body {
         display: none;
     }
 }
-
+.dashboard{
+    padding-left:30px;
+}
 .container {
     width: 100%;
 }
@@ -249,4 +251,87 @@ body {
         .sidebar.active {
             margin-left: 0px;
         }
+}
+.lessonBox {
+    border: 1px solid #eaedf3;
+    height: 220px;
+    width: 350px;
+    padding: 10px;
+    margin-left:20px;
+}
+.lessonLeft{
+    float:left;
+    position:relative;
+}
+.lessonRight {
+    position: relative;
+    float: right;
+    right: 5px;    
+}
+.pic{
+    height:200px;
+
+}
+.lessonDate {
+    font-size: 8pt;
+    color: #9ea0a5;
+    padding-top: 50px;
+}
+
+.lessonBar {
+    position: relative;
+    /*padding-top:8px;*/
+}
+
+.lessonBarBase {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #eaedf3;
+}
+
+.lessonBarGreen {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: #37b047;
+}
+
+.lessonEnroll {
+    font-size: 8pt;
+    color: #1665d8;
+    padding-top: 10px;
+}
+.lessonTitle {
+    font-weight: bold;
+    font-size: 10pt;
+    padding-right: 10px;
+}
+.tableRow {
+    border: 1px solid #eaedf3;
+    height: 50px;
+    width: 800px;
+    margin-left:20px;
+    
+}
+.tableRowLeft {
+    float: left;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 14px;
+    /*color: #a79f9f;*/
+    color:black;
+    padding:15px 10px 5px 20px;
+}
+.tableRowRight {
+    float: right;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 12px;
+    color: #a79f9f;
+    /*color: black;*/
+    padding: 15px 15px 5px 20px;
+}
+.tableDetails{
+    float:left;
 }
