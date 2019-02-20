@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Ongoing</h2>
+<div class="dashboardSlider">
+    @Html.Partial("LessonBox")
+    @Html.Partial("LessonBox")
+</div>
+
+@Html.Partial("TableViewPartial")

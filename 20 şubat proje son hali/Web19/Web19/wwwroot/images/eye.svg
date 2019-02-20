@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>4F903331-0A8C-4659-BF7C-C4D35D9F0C10</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M12,10.0005191 C12,11.1476771 11.105,12.0768233 10,12.0768233 C8.895,12.0768233 8,11.1476771 8,10.0005191 C8,8.85336102 8.895,7.9242149 10,7.9242149 C11.105,7.9242149 12,8.85336102 12,10.0005191 M10,13.9236958 C7.011,13.9236958 4.195,12.4474436 2.399,10.0005191 C4.195,7.5535946 7.011,6.07630418 10,6.07630418 C12.989,6.07630418 15.805,7.5535946 17.601,10.0005191 C15.805,12.4474436 12.989,13.9236958 10,13.9236958 M10,4 C5.724,4 1.999,6.41681806 0,10.0005191 C1.999,13.5842201 5.724,16 10,16 C14.276,16 18.001,13.5842201 20,10.0005191 C18.001,6.41681806 14.276,4 10,4" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon/20px/view_simple-[#815]">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="view_simple-[#815]" fill-opacity="0" fill="#FFFFFF" xlink:href="#path-1"></use>
+            <g id="⚙️Atoms/Colour/Grey-Darker/1---100%" mask="url(#mask-2)" fill="#9EA0A5">
+                <g transform="translate(-1.000000, -1.000000)" id="Colour">
+                    <rect x="0" y="0" width="22" height="22"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

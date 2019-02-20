@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>158B0DA1-C072-4DFC-9EF8-791B8A1F60BB</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M0,20 L19.6763245,20 L19.6763245,18.042095 L0,18.042095 L0,20 Z M6.88671356,13.1473324 L6.88671356,10.5139501 L15.3219539,2.64512971 L17.1233214,4.64317181 L9.41020217,13.1473324 L6.88671356,13.1473324 Z M20,4.64512971 L15.3760638,0 L4.91908112,9.68771415 L4.91908112,15.1052374 L10.2523489,15.1052374 L20,4.64512971 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-30.000000, -555.000000)">
+            <g id="Menu" transform="translate(0.000000, 70.000000)">
+                <g transform="translate(0.000000, 209.000000)" id="Item">
+                    <g transform="translate(0.000000, 263.000000)">
+                        <g id="Icon/20px/edit-[#1482]" transform="translate(30.000000, 13.000000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use fill-opacity="0" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            <g id="⚙️Atoms/Colour/Grey-Darker/1---100%" mask="url(#mask-2)" fill="#9EA0A5" fill-rule="evenodd">
+                                <g transform="translate(-1.000000, -1.000000)" id="Colour">
+                                    <rect x="0" y="0" width="22" height="22"></rect>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
